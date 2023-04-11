@@ -1,12 +1,7 @@
 import React from 'react';
 
 const Character = (props) => {
-    let {itemName}=props;
-    let {itemImg}=props;
-    let {itemSpecies}=props;
-    let {itemStatus}=props;
-    let {itemGender}=props;
-    let {itemId}=props;
+    let {itemName, itemImg, itemSpecies, itemStatus, itemGender, itemId}=props;
 
 
     return (
