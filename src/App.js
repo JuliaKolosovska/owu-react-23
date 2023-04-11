@@ -6,23 +6,41 @@ function App() {
     return (
         <div className="App">
             <h1>Rick and Morty</h1>
-            <Character itemName={'Rick Sanchez'}
+            <Character itemId={1}
+                        itemName={'Rick Sanchez'}
                        itemSpecies={'Human'}
+                       itemStatus={'Alive'}
+                       itemGender={'Male'}
                       itemImg={'https://rickandmortyapi.com/api/character/avatar/1.jpeg'}/>
-            <Character itemName={'Morty Smith'}
+            <Character itemId={2}
+                       itemName={'Morty Smith'}
                        itemSpecies={'Human'}
+                       itemStatus={'Alive'}
+                       itemGender={'Male'}
                       itemImg={'https://rickandmortyapi.com/api/character/avatar/2.jpeg'}/>
-            <Character itemName={'Summer Smith'}
+            <Character itemId={3}
+                       itemName={'Summer Smith'}
                        itemSpecies={'Human'}
+                       itemStatus={'Alive'}
+                       itemGender={'Female'}
                       itemImg={'https://rickandmortyapi.com/api/character/avatar/3.jpeg'}/>
-            <Character itemName={'Beth Smith'}
+            <Character itemId={4}
+                       itemName={'Beth Smith'}
                        itemSpecies={'Human'}
+                       itemStatus={'Alive'}
+                       itemGender={'Female'}
                       itemImg={'https://rickandmortyapi.com/api/character/avatar/4.jpeg'}/>
-            <Character itemName={'Jerry Smith'}
+            <Character itemId={5}
+                       itemName={'Jerry Smith'}
                        itemSpecies={'Human'}
+                       itemStatus={'Alive'}
+                       itemGender={'Male'}
                       itemImg={'https://rickandmortyapi.com/api/character/avatar/5.jpeg'}/>
-            <Character itemName={'Abadango Cluster Princess'}
+            <Character itemId={6}
+                       itemName={'Abadango Cluster Princess'}
                        itemSpecies={'Alien'}
+                       itemStatus={'Alive'}
+                       itemGender={'Female'}
                       itemImg={'https://rickandmortyapi.com/api/character/avatar/6.jpeg'}/>
         </div>
     );
