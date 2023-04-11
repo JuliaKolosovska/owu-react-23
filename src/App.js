@@ -40,7 +40,7 @@ function App() {
                        itemName={'Abadango Cluster Princess'}
                        itemSpecies={'Alien'}
                        itemStatus={'Alive'}
-                       itemGender={'Female'}
+                       itemGender={'FemaleІ'}
                       itemImg={'https://rickandmortyapi.com/api/character/avatar/6.jpeg'}/>
         </div>
     );
