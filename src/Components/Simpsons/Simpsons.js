@@ -1,17 +1,13 @@
 import React from 'react';
+import Simpson from "../Simpson/Simpson";
 
-const Simpsons = (props) => {
-    let {itemName, itemImg, itemAge}=props;
-
+const Simpsons = ({xxx: simpsons}) => {
 
 
     return (
         <div>
 
-            <h3>{itemName}</h3>
-            <h4>Age: {itemAge}</h4>
-            <img width={100} src={itemImg} alt={itemName}/>
-
+            {simpsons.map((value, index) => (<Simpson item={value} key={index}/>))}
 
         </div>
     );
