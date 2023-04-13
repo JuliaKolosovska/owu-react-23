@@ -5,9 +5,35 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.full-post{
+  height: 200px;
+  width: 40vw;
+  background: #e0e0fa;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: sticky;
+  top: 40px; right: 40px;
+}
+
+.posts{
+  background: #f3f3f8;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+}
+
+.main{
+  display: flex;
+  justify-content:flex-start;
+
 }
