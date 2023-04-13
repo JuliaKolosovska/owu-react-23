@@ -1,10 +1,11 @@
 
-import './App.css';
+import './index.css'
+import Launches from "./components/launches/Launches";
 
 function App() {
   return (
-    <div className="App">
-      hello
+    <div className={'cont'}>
+     <Launches/>
     </div>
   );
 }
