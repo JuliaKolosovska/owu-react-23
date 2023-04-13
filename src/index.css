@@ -23,14 +23,16 @@ code {
     align-items: center;
 }
 
-#root{
+#root {
     width: 100vw;
     height: 100%;
 }
-.cont{
+
+.cont {
     width: 100vw;
     height: 100%;
 }
+
 .launches {
     width: 100vw;
     height: 100%;
