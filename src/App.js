@@ -4,6 +4,7 @@ import FullPost from "./components/fullPost/FullPost";
 import './index.css';
 
 
+
 function App() {
 
     let [onePost, setOnePost] = useState(null)
@@ -21,16 +22,16 @@ function App() {
 
             <div className={'full-post'}>
                 {
-                onePost
-                &&
-                (
-                    <div className={'full-post'}>
-                        <FullPost value={onePost}/>
-                    </div>
-                )
+                    onePost
+                    &&
+                    (
+                        <div className={'full-post'}>
+                            <FullPost value={onePost}/>
+                        </div>
+                    )
 
 
-            }
+                }
             </div>
         </div>
     );
