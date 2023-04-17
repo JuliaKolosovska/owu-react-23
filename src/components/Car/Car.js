@@ -9,6 +9,7 @@ const Car = ({car, setCarForUpdate}) => {
             <div>price: {price} </div>
             <div>year: {year}</div>
             <button onClick={()=>setCarForUpdate(car)}>Update</button>
+            <button onClick={()=>setCarForUpdate(car)}>Delete</button>
 
 
         </div>

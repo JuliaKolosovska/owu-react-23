@@ -52,7 +52,7 @@ if(carForUpdate){
             {errors.year && <span>{errors.year.message}</span>}
             <button disabled={!isValid}>{carForUpdate?'Update':'Save'}</button>
             {carForUpdate && (
-                <button disabled={!isValid} onClick={() => deleteCar(carForUpdate.id)}>Delete</button>
+                <button hidden={!isValid} onClick={() => deleteCar(carForUpdate.id)}>Delete</button>
             )}
         </form>
     );
