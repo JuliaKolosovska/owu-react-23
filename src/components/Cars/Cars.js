@@ -8,14 +8,15 @@ const Cars = () => {
     const [allCars, setAllCars]=useState(null);
     const [carForUpdate, setCarForUpdate]=useState(null);
 
+
     useEffect(()=>{
        carService.getAll().then(value => value.data).then(value =>setCars(value) )
     },[allCars])
     return (
         <div>
-            <CarForm setAllCars={setAllCars} carForUpdate={carForUpdate}/>
+            <CarForm setAllCars={setAllCars} carForUpdate={carForUpdate} setCarForUpdate={setCarForUpdate}/>
             <hr/>
-            {cars.map(car=><Car key={car.id} car={car} setCarForUpdate={setCarForUpdate}/>)}
+            {cars.map(car=><Car key={car.id} car={car} setCarForUpdate={setCarForUpdate} />)}
         </div>
     );
 };
