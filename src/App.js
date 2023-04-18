@@ -1,11 +1,12 @@
 
 import Users from "./components/Users/Users";
 import UserForm from "./components/UserForm/UserForm";
+import Posts from "./components/Posts/Posts";
 
 function App() {
   return (
-    <div className="App">
-
+    <div>
+{/*<Posts/>*/}
       <Users/>
     </div>
   );

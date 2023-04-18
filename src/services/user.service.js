@@ -5,9 +5,11 @@ import axios from "axios";
 
 const userService = {
     getAll: () => axiosService.get(urls.users),
-    create: (user) => axiosService.create(urls.users, user)
+    create: (user) => axiosService.put(urls.users, user)
 
 }
+
+
 
 const axiosInstance= axios.create({
 baseURL: 'https://jsonplaceholdertypicode.com/users',
