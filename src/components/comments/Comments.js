@@ -14,6 +14,8 @@ const Comments = () => {
 
     return (
         <div>
+            <Outlet/>
+            <br/>
             <div>{
                 comments.map(value => <Comment key={value.id} item={value}/>)
             }
@@ -21,6 +23,8 @@ const Comments = () => {
             <div>
                 <Outlet/>
             </div>
+
+
         </div>
     );
 };
