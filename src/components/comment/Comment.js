@@ -8,16 +8,22 @@ const Comment = ({item}) => {
     return (
         <div>
 
-            <Link to={postId.toString()} state={{...item}}>
+            <div>
+                <Link to={postId.toString()} state={{...item}}>
                 <div>postId:{postId}</div>
                 <div>id:{id}</div>
                 <div>name:{name}</div>
                 <div>email:{email}</div>
                 <div>body:{body}</div>
             </Link>
-<br/>
-            <Outlet/>
-            <hr/>
+                <br/>
+            </div>
+
+            <div>
+                <Outlet/>
+                <hr/>
+            </div>
+
         </div>
     );
 };

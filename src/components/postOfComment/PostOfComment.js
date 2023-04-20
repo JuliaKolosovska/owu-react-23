@@ -5,7 +5,7 @@ import {commentsService} from "../../services/comments.service";
 const PostOfComment = () => {
     let {state} = useLocation();
     let {postId} = useParams();
-    let [post, setPost] = useState(null);
+    let [post, setPost] = useState([]);
 
 
     useEffect(() => {
@@ -13,14 +13,14 @@ const PostOfComment = () => {
             .then(value => {
                 setPost({...value});
             });
-    }, [post, postId]);
+    }, [postId]);
     return (
         <div>
 
 
             <div>id:{state.postId}</div>
             <div>title:{post.title}</div>
-            <div>body:{state.body}</div>
+            <div>body:{post.body}</div>
         </div>
     );
 };
