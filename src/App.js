@@ -4,6 +4,7 @@ import Home from "./components/home/Home";
 import Todos from "./components/todos/Todos";
 import Albums from "./components/albums/Albums";
 import Comments from "./components/comments/Comments";
+import PostOfComment from "./components/postOfComment/PostOfComment";
 
 function App() {
     return (
@@ -27,14 +28,16 @@ function App() {
                 <Routes>
                     <Route path={'/'} element={<Home/>}/>
                     <Route path={'/todos'} element={<Todos/>}/>
-                        <Route path={'/albums'} element={<Albums/>}/>
-                        <Route path={'/comments'} element={<Comments/>}/>
+                    <Route path={'/albums'} element={<Albums/>}/>
+                    <Route path={'/comments'} element={<Comments/>}>
+                        <Route path={':postId'} element={<PostOfComment/>}/>
+                    </Route>
                 </Routes>
 
 
             </div>
         </div>
-);
+    );
 }
 
 export default App;

@@ -9,7 +9,7 @@ const Comments = () => {
     const [comments, setComments]=useState([])
 
     useEffect(()=>{
-        commentsService.getAll().then(value => value.data).then(value => setComments(value))
+        commentsService.getAll().then(value => value.data).then(value => setComments([...value]))
     },[])
 
     return (
