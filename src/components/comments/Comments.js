@@ -20,9 +20,7 @@ const Comments = () => {
                 comments.map(value => <Comment key={value.id} item={value}/>)
             }
             </div>
-            <div>
-                <Outlet/>
-            </div>
+
 
 
         </div>
