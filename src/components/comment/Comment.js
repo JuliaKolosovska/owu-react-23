@@ -15,7 +15,7 @@ const Comment = ({item}) => {
                 <div>email:{email}</div>
                 <div>body:{body}</div>
             </Link>
-
+<br/>
             <Outlet/>
             <hr/>
         </div>

@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import {commentsService} from "../../services/comments.service";
 
 const PostOfComment = () => {
+    let {state} = useLocation();
     let {postId} = useParams();
     let [post, setPost] = useState(null);
 
@@ -12,13 +13,14 @@ const PostOfComment = () => {
             .then(value => {
                 setPost({...value});
             });
-    }, [postId]);
+    }, [post, postId]);
     return (
         <div>
-            <div>userId:{post.userId}</div>
-            <div>id:{post.id}</div>
+
+
+            <div>id:{state.postId}</div>
             <div>title:{post.title}</div>
-            <div>body:{post.body}</div>
+            <div>body:{state.body}</div>
         </div>
     );
 };
