@@ -1,8 +1,10 @@
-import {Link, Routes, Route} from "react-router-dom";
+import {Link, Routes, Route, Navigate} from "react-router-dom";
 import './App.css';
-import Home from "./components/home/Home";
+
 import {Posts} from "./components/posts/Posts";
 import {Comments} from "./components/comments/Comments";
+import MainLayout from "./layouts/mainLayout/MainLayout";
+import CatDogPage from "./pages/catDogPage/CatDogPage";
 
 
 function App() {
@@ -10,7 +12,7 @@ function App() {
         <div className="App">
             <div className="menu">
                 <h3>
-                    <Link to={'/'}>Home</Link>
+                    <Link to={'/cat_dog'}>Cat-Dog</Link>
                 </h3>
                 <h3>
                     <Link to={'/comments'}>Comments</Link>
@@ -23,9 +25,12 @@ function App() {
             <div>
 
                 <Routes>
-                    <Route path={'/'} element={<Home/>}/>
-                    <Route path={'/posts'} element={<Posts/>}/>
-                    <Route path={'/comments'} element={<Comments/>}/>
+                    <Route path={'/'} element={<MainLayout/>}>
+                        <Route index element={<Navigate to={'cat_dog'}/>}/>
+                        <Route path={'/cat_dog'} element={<CatDogPage/>}/>
+                        <Route path={'/posts'} element={<Posts/>}/>
+                        <Route path={'/comments'} element={<Comments/>}/>
+                    </Route>
                 </Routes>
 
 

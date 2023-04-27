@@ -1,29 +1,32 @@
-import React, {useEffect, useState} from 'react';
-import {Outlet} from "react-router-dom";
+import React, {Component} from 'react';
 
 import {commentsService} from "../../services/comments.service";
 import Comment from "../comment/Comment";
 
+class Comments extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            comments: []
+        }
 
-const Comments = () => {
-    const [comments, setComments]=useState([])
+    }
 
-    useEffect(()=>{
-        commentsService.getAll().then(value => value.data).then(value => setComments([...value]))
-    },[])
+    componentDidMount() {
+        commentsService.getAll().then(value => value.data).then(value => this.setState({comments: value}))
+    }
 
-    return (
-        <div>
-<Outlet/>
-            <div>{
-                comments.map(value => <Comment key={value.id} item={value}/>)
-            }
+    render() {
+        return (
+            <div>
+                {
+                    this.state.comments.map(comment => <Comment key={comment.id} comment={comment}/>)
+                }
+
+
             </div>
-
-
-
-        </div>
-    );
-};
+        );
+    };
+}
 
 export {Comments}

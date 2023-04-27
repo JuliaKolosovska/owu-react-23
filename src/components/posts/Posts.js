@@ -1,34 +1,33 @@
-import React, {Component, useEffect, useState} from 'react';
+import React, {Component} from 'react';
 
-
-import { postsService} from "../../services/posts.service";
+import {postsService} from "../../services/posts.service";
 import {Post} from "../post/Post"
 
 class Posts extends Component {
     constructor(props) {
         super(props);
-        this.state={
-            posts:[]
+        this.state = {
+            posts: []
         }
 
     }
 
     componentDidMount() {
-        postsService.getAll().then(value=>value.data).then(value=>this.state({posts:value}))
+        postsService.getAll().then(value => value.data).then(value => this.setState({posts: value}))
     }
 
     render() {
 
 
-
         return (
             <div>
                 {
-                    <Post value={this.state()}/>
+                    this.state.posts.map(post => <Post key={post.id} post={post}/>)
                 }
 
             </div>
         );
     };
 }
+
 export {Posts}

@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 
-const Comment = ({item}) => {
-    const {postId, id, name, email, body} = item;
+class Comment extends Component {
+    render() {
+        const {postId, id, name, email, body} = this.props.comment;
 
 
-    return (
-        <div>
-
+        return (
+            <div>
 
 
                 <div>postId:{postId}</div>
@@ -17,11 +17,12 @@ const Comment = ({item}) => {
                 <div>body:{body}</div>
 
                 <br/>
-          <hr/>
+                <hr/>
 
 
-        </div>
-    );
-};
+            </div>
+        );
+    };
+}
 
 export default Comment;
