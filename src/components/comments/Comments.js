@@ -14,8 +14,7 @@ const Comments = () => {
 
     return (
         <div>
-            <Outlet/>
-            <br/>
+<Outlet/>
             <div>{
                 comments.map(value => <Comment key={value.id} item={value}/>)
             }
@@ -27,4 +26,4 @@ const Comments = () => {
     );
 };
 
-export default Comments;
+export {Comments}

@@ -1,10 +1,9 @@
 import {Link, Routes, Route} from "react-router-dom";
 import './App.css';
 import Home from "./components/home/Home";
-import Todos from "./components/todos/Todos";
-import Albums from "./components/albums/Albums";
-import Comments from "./components/comments/Comments";
-import PostOfComment from "./components/postOfComment/PostOfComment";
+import {Posts} from "./components/posts/Posts";
+import {Comments} from "./components/comments/Comments";
+
 
 function App() {
     return (
@@ -14,24 +13,19 @@ function App() {
                     <Link to={'/'}>Home</Link>
                 </h3>
                 <h3>
-                    <Link to={'/todos'}>Todos</Link>
+                    <Link to={'/comments'}>Comments</Link>
                 </h3>
                 <h3>
-                    <Link to={'/albums '}>Albums </Link>
+                    <Link to={'/posts '}>Posts </Link>
                 </h3>
-                <h3>
-                    <Link to={'/comments '}>Comments </Link>
-                </h3>
+
             </div>
             <div>
 
                 <Routes>
                     <Route path={'/'} element={<Home/>}/>
-                    <Route path={'/todos'} element={<Todos/>}/>
-                    <Route path={'/albums'} element={<Albums/>}/>
-                    <Route path={'/comments'} element={<Comments/>}>
-                        <Route path={':postId'} element={<PostOfComment/>}/>
-                    </Route>
+                    <Route path={'/posts'} element={<Posts/>}/>
+                    <Route path={'/comments'} element={<Comments/>}/>
                 </Routes>
 
 
