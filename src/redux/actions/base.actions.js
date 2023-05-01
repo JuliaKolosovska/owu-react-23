@@ -1,5 +1,5 @@
-const INC="INC";
-const DEC="DEC";
-const RESET="RESET";
+const START_LOADING="START_LOADING";
+const SET_CARS="SET_CARS";
+const SAVE_CAR="SAVE_CAR";
 
-export {INC, DEC, RESET}
+export {START_LOADING, SET_CARS, SAVE_CAR}

@@ -1,4 +1,5 @@
-import {createStore} from "redux";
-import {baseReducer} from "../reducers";
+import {applyMiddleware, createStore} from "redux";
+import {carReducer} from "../reducers";
+import thunk from "redux-thunk";
 
-export let store=createStore(baseReducer)
+export let store=createStore(carReducer,applyMiddleware(thunk))
