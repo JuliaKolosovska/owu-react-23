@@ -1,15 +1,22 @@
+import {Navigate, Route, Routes} from "react-router-dom";
 
-import Users from "./components/Users/Users";
-import UserForm from "./components/UserForm/UserForm";
-import Posts from "./components/Posts/Posts";
+import {MainLayout} from "./layouts";
+import {CarPage, CommentPage, UserPage} from "./pages";
+
 
 function App() {
-  return (
-    <div>
-{/*<Posts/>*/}
-      <Users/>
-    </div>
-  );
+    return (
+        <div>
+            <Routes>
+                <Route path={'/'} element={<MainLayout/>}>
+                    <Route index element={<Navigate to={'users'}/>}/>
+                    <Route path={'users'} element={<UserPage/>}/>
+                    <Route path={'comments'} element={<CommentPage/>}/>
+                    <Route path={'cars'} element={<CarPage/>}/>
+                </Route>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

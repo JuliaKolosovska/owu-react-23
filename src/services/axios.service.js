@@ -1,6 +1,12 @@
 import axios from "axios";
-import {baseURL} from "../configs/urls";
 
-const axiosService=axios.create({baseURL});
+import {carsAPI, jsonPlaceHolderAPI} from "../configs";
 
-export {axiosService}
+
+const placeHolderAPIService=axios.create({baseURL:jsonPlaceHolderAPI});
+const carsAPIService=axios.create({baseURL:carsAPI});
+
+export{
+    placeHolderAPIService,
+    carsAPIService
+}

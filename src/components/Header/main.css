@@ -1,0 +1,9 @@
+.header{
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #acd6fd;
+    color: #1665b0;
+    cursor: pointer;
+}

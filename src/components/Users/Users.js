@@ -1,23 +1,27 @@
-import React, {useEffect, useState} from 'react';
-import {userService} from "../../services/user.service";
-import UserForm from "../UserForm/UserForm";
-import User from "../User/User";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {userService} from "../../services";
+import {userActions} from "../../redux";
+import {User} from "../User/User";
 
 const Users = () => {
-    const [users, setUsers]=useState([]);
 
-    const [allUsers, setAllUsers]=useState(null);
+const dispatch=useDispatch();
+const {users}=useSelector(state=>state.users);
 
-    useEffect(()=>{
-        userService.getAll().then(value=>value.data).then(value=>setUsers(value))
-    },[allUsers])
+useEffect(()=>{
+    userService.getAll().then(value => value.data).then(value => dispatch(userActions.setAll(value)))
+
+},[dispatch])
+
+
     return (
         <div>
-            <UserForm setAllUsers={setAllUsers}/>
-            <hr/>
-            {users.map(user => <User key={user.id} user={user}/>)}
+            {
+                users.map(user=><User key={user.id} user={user}/>)
+            }
         </div>
     );
 };
 
-export default Users;
+export {Users};
