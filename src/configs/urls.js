@@ -2,7 +2,7 @@ const jsonPlaceHolderAPI = 'https://jsonplaceholder.typicode.com'
 const carsAPI = 'http://owu.linkpc.net/carsAPI/v1'
 
 
-const cars = '/cars'
+const cars = '/cars';
 
 const urls = {
     users: '/users',
